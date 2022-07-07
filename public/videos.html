@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ave_pro.png">
+    <link rel="stylesheet" href="videos.css">
+    <title>Cocina AVE</title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="ave_pro.png" class="ave_image" alt="Logo de avelearning">
+        </div>
+        <!--MENU DE NAVEGACION -->
+        <ul class="nav-links">
+         <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu" id="menu">
+                    <!--<li><a href="/">Home</a></li>
+                    <li><a href="/">Nosotros</a></li>-->
+                    <li class="services">
+                        <a href="/">CATEGORIAS</a>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown">
+                    <li><a href="videos.html">COCINA</a></li>
+                    <li><a href="automotriz.html">AUTOMOTRIZ</a></li>
+                    <li><a href="limpieza.html">LIMPIEZA</a></li>
+                    <!--<li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>-->
+                </ul>
+                </li>
+                    <li><a href="/">CONTACTANOS</a></li>
+                    <!--<li><a href="/">Videos</a></li>-->
+                    <li><a href="principal.html" id="logout">IR A INICIO</a></li>
+            </div>
+        </ul>
+    </nav>
+
+
+
+    <h3 class="heading">AVE COCINA</h3>
+    <div class="container">
+        
+        <div class="main-video">
+            <div class="video">
+                <video class="subway" src="cocinar.mp4" controls muted autoplay></video>
+                <h3 class="title">01 Subway Casero</h3>
+            </div>
+            <form>
+                <p class="clasificacion">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+            </form>
+        </div>
+
+        <div class="video-list">
+            <div class="vid active">
+                <video src="ENTOMATADAS DE QUESO.mp4" muted></video>
+                <h3 class="title">02 Entomatadas de Queso</h3>
+            </div>
+
+            <div class="vid">
+                <video src="DEDOS O PALITOS DE QUESO _ recetas de cocina faciles rapidas y economicas _ comidas ricas.mp4" muted></video>
+                <h3 class="title">03 Dedos o Palitos de Queso</h3>
+            </div>
+
+            <div class="vid">
+                <video src="Pizza en sartén sin horno 🍕 ¡FÁCIL Y RÁPIDA! 😱.mp4" muted></video>
+                <h3 class="title">04 Pizza Casera</h3>
+            </div>
+        </div> 
+    </div>
+
+    
+
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+
+        listVideo.forEach(video => {
+            video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text;
+                };
+            };
+        });
+
+    </script>
+
+</body>
+</html>

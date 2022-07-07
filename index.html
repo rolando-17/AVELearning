@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ave_pro.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>AVE Learning</title>
+    
+    
+    <script type="module" src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyC9TDq-xlAscW3RQhDM_LQ6MH8aU8AIhWs",
+          authDomain: "database-ave.firebaseapp.com",
+          projectId: "database-ave",
+          storageBucket: "database-ave.appspot.com",
+          messagingSenderId: "893107246611",
+          appId: "1:893107246611:web:0f316bfea99944c80d11e6"
+        };
+        
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //const auth = firebase.auth();
+    </script>
+    
+</head>
+
+<body>
+    <div class="container-form sign-up">
+        
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                <button class="sign-up-btn">INICIAR SESION</button>
+            </div>
+        </div>
+        <form class="formulario" id="register_id">
+            <img src="ave_pro.png" class="ave_image" alt="">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">Crear una cuenta gratis</p>
+            <input type="text"  id="nombre" placeholder="Nombre">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button class="regist">REGISTRARSE</button>
+        </form>
+    </div>
+    
+    <div class="container-form sign-in">
+        
+        <form class="formulario" id="login_id">
+            <img src="ave_pro.png" class="ave_image" alt="">
+            <h2 class="create-account">INICIAR SESION</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <input type="email" id="login_email" placeholder="Email">
+            <input type="password" id="login_password" placeholder="Contraseña">
+            <!-- CAMBIAR EL BOTON Y PONERLE UNA CLASE-->
+            <button id="btn-iniciar" class="iniciar">INICIAR SESION</button>
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                <button class="sign-in-btn">REGISTRARSE</button>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<!--<script src="firebase.js"></script>-->
+<script type="module" src="script.js"></script>
+<script src="register.js"></script>
+<!--<script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>-->
+</html>

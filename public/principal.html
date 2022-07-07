@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ave_pro.png">
+    <link rel="stylesheet" href="principal.css">
+    <title>Inicio AVE</title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="ave_pro.png" class="ave_image" alt="Logo de avelearning">
+        </div>
+        <!--MENU DE NAVEGACION -->
+        <ul class="nav-links">
+         <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu" id="menu">
+                    <li><a href="principal.html">INICIO</a></li>
+                    <li><a href="#" id="myBtn">ACERCA DE NOSOTROS</a></li>
+                    <li class="services">
+                        <a href="/">CATEGORÍAS</a>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown">
+                    <li><a href="videos.html">COCINA</a></li>
+                    <li><a href="automotriz.html">AUTOMOTRIZ</a></li>
+                    <li><a href="limpieza.html">LIMPIEZA</a></li>
+                    <!--<li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>-->
+                </ul>
+                </li>
+                    <li><a href="#" id="myBtn2">COLABORADORES</a></li>
+                    <!--<li><a href="videos.html">Videos</a></li>-->
+                    <li><a href="index.html" id="logout">SALIR</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>AVE Learning</h2>
+          </div>
+          <div class="modal-body">
+            <p>Somos una plataforma que te ofrece información y aprendizaje en distintas actividades de la vida diaria, 
+              contando con creadores de contenido que dominan el tema en base a su experiencia, y brindando también  la oportunidad 
+              de crear contenido de algún tema en el que tengas experiencia y desees compartir con los demás a cambio de incentivos y 
+              reconocimientos en nuestra plataforma.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <!--<h3> </h3>-->
+          </div>
+        </div>
+      
+      </div>
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+    <div id="myModal2" class="modal2">
+        <!-- Modal content -->
+        <div class="modal-content2">
+          <div class="modal-header2">
+            <span class="close2">&times;</span>
+            <h2>AVE Learning</h2>
+          </div>
+          <div class="modal-body2">
+            <p> -(878) 623536 – psic. Ana Rebeca López Castillo
+              Calle naranjo #37, Fracc Residencial, Matamoros, Tamaulipas.
+            </p>
+          </div>
+          <!--<div class="modal-footer2">
+            <h3></h3>
+          </div>-->
+        </div>
+      
+      </div>
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+    <div class="contenido01">
+      <div class="texto01">
+        <h1>QUE QUIERES APRENDER HOY?</h1>
+        <img class="gif_texto01" src="inicio.gif" alt="">
+      </div>
+      <div class="texto02">
+        <h2>CONTAMOS CON DIFERENTES CATEGORIAS PARA TU VIDA DIARIA</h2>
+      </div>
+      <div class="texto04">
+        <h1>Como empezar?</h1>
+      </div>
+      
+
+      <div class="texto03">
+          <h3>Paso 1 . Consulta la categoria de lo que gustes aprender</h3>
+          <img class="gif_texto03" src="paso 1.gif" alt="">
+      </div>
+      
+      <div class="texto06">
+        <h3>Paso 2.  Elige el mejor video del contenido de tu preferencia</h3>
+        <img class="gif_texto06" src="paso 2.gif" alt="">
+      </div>
+      
+      
+      <div class="texto07">
+        <h3>Paso 3. aprende y califica el contenido al finalizar</h3>
+        <img class="gif_texto07" src="paso 3.gif" alt="">
+      </div>
+      
+
+      <div class="texto08">
+        <h1>Quieres subir contenido?</h1>
+        <h3>1 . Ve al inicio y contacta con nosotros,
+          Obtendrás beneficios y reconocimientos dependiendo tus puntuacion en cada video</h3>
+          <img class="gif_texto08" src="Diseño sin título (1).gif" alt="">
+      </div>
+      
+        
+    </div>
+    
+</body>
+<script type="module" src="script.js"></script>
+<script>
+        // PRIMER MODAL: DE ACERCA DE NOSOTROS
+
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+        //FIN DEL PRIMER MODAL
+</script>
+<script>
+    //SEGUNDO MODAL CONTACTANOSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close2")[0];
+
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function() {
+    modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+    modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+    //FIN DEL SEGUNDO MODALXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+</script>
+</html>
